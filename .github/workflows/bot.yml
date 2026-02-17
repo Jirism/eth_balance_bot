@@ -24,7 +24,10 @@ jobs:
       - name: Run bot
         env:
           PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+          RPC_URL: ${{ secrets.RPC_URL }}   # ← přidáno
+          DRY_RUN: "false"                         # doporučeno při testu
         run: python mainnet_bot.py
+
 
 
 
