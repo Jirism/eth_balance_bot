@@ -1,1 +1,9 @@
 2026-01-28 16:36:21.230033 - Nalezena odmìna: 0.01
+2026-02-16 14:37:44 - Gas price: 15 Gwei
+2026-02-16 14:37:44 - Balance: 0.000000 ETH, Narostlo: 0.000000 ETH, Gas: 15 Gwei, Collect? NE
+2026-02-16 15:45:32 - Gas price: 15 Gwei
+2026-02-16 15:45:32 - Balance: 0.000000 ETH, Narostlo: 0.000000 ETH, Gas: 15 Gwei, Collect? NE
+2026-02-16 15:49:07 - Gas price: 15 Gwei
+2026-02-16 15:49:07 - Balance: 0.000000 ETH, Narostlo: 0.000000 ETH, Gas: 15 Gwei, Collect? NE
+2026-02-16 15:57:30 - Gas price: 15 Gwei
+2026-02-16 15:57:30 - Balance: 0.000000 ETH, Narostlo: 0.000000 ETH, Gas: 15 Gwei, Collect? NE

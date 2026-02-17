@@ -1,30 +1,30 @@
-name: ETH Balance Bot
+name: ETH Bot
 
-# kdy se spouští
 on:
   schedule:
-    - cron: "0 * * * *"   # každou hodinu
-  workflow_dispatch:       # ruční spuštění z GitHubu
+    - cron: "*/10 * * * *"  # každých 10 minut
+  workflow_dispatch:
 
 jobs:
   run-bot:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - name: Checkout repo
+        uses: actions/checkout@v3
 
       - name: Setup Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v4
         with:
-          python-version: "3.11"
+          python-version: "3.10"
 
       - name: Install dependencies
-        run: |
-          pip install requests
+        run: pip install -r requirements.txt
 
       - name: Run bot
         env:
-          ETHERSCAN_API_KEY: ${{ secrets.ETHERSCAN_API_KEY }}
-        run: |
-          python mainnet_bot.py
+          PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+        run: python mainnet_bot.py
+
+
+
