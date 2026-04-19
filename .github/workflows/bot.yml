@@ -2,7 +2,7 @@ name: ETH Bot
 
 on:
   schedule:
-    - cron: "*/10 * * * *"  # každých 10 minut
+    - cron: "*/10 * * * *"   # každých 10 minut
   workflow_dispatch:
 
 jobs:
@@ -24,18 +24,7 @@ jobs:
       - name: Run bot
         env:
           PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
-          RPC_URL: ${{ secrets.RPC_URL }}   # ← přidáno
-          DRY_RUN: "false"                         # doporučeno při testu
+          RPC_URL: ${{ secrets.RPC_URL }}
+          WITHDRAW_ADDRESS: ${{ secrets.WITHDRAW_ADDRESS }}
+          DRY_RUN: "false"
         run: python mainnet_bot.py
-
-        - name: Run bot
-  env:
-    PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
-    RPC_URL: ${{ secrets.RPC_URL }}
-    WITHDRAW_ADDRESS: ${{ secrets.WITHDRAW_ADDRESS }}
-    DRY_RUN: "false"
-  run: python mainnet_bot.py
-
-
-
-
